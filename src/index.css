@@ -5,9 +5,525 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0, 0, 0, 0.975);
+  color: white;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*  */
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*  */
+/*  */
+/*  */
+/* main content */
+.flex{
+  display: flex;
+}
+.space-btn{
+  justify-content: space-between;
+}
+.mt20{
+  margin-top: 20px;
+}
+/* .App{
+  text-align: center;
+} */
+.col{
+  flex-direction: column;
+}
+.academy-container {
+  position: relative;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url('../public/backgrond.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  background-color: rgba(51,51,51,0.5);
+  position: fixed;
+  width: 87%;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav span {
+  background-color: #6435e9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+
+}
+
+.search-signin {
+  display: flex;
+  align-items: center;
+}
+
+.search-signin input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.search-signin button {
+  background-color: #6435e9;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-content {
+  position: absolute;
+  /* text-align: center; */
+  /* margin-top: 100px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Adjust text color as needed */
+  text-align: center;
+  
+  
+}
+
+.main-content h1 {
+  font-size: 48px;
+}
+
+.main-content p {
+  position: absolute;
+  font-size: 18px;
+  margin: 20px 0;
+  /* top: 100px; */
+}
+
+.get-started {
+  background-color: #6435e9;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 100px;
+}
+
+/*  */
+
+.crypto-content{
+  background-color: rgba(51, 51, 51, 0.6);
+  color: white;
+  /* border: 1px solid rgba(255, 255, 255, 0.822); */
+  border: 1px solid #333;
+  padding: 30px;
+  width: 30%;
+  border-radius:20px 20px 0 0 ;
+  margin-left: 100px;
+}
+.crypto-section{
+  background-color: rgba(51,51,51,0.5);
+}
+.crypto-img{
+  width: 120px;
+  height: 150px;
+  border: 2px solid #333;
+  padding: 5px;
+  border-radius: 5px;
+  
+}
+.crypto-img1{
+  width: 120px;
+  height: 100px;
+  border: 2px solid #333;
+  padding: 5px;
+  border-radius: 5px;
+}
+.crypto-title{
+  font-size: 2rem;
+}
+.crypto-title1{
+  font-size: 1.4rem;  
+}
+.crypto-title1 p{
+  border-bottom: 2px dotted #333;
+}
+
+.crypto-content p{
+  font-size: 0.9rem;
+  color: #f3ecec69;
+  padding: 20px;
+  border-bottom: 4px dotted #333;
+
+}
+.crypto-content-box p{
+  font-size: 0.9rem;
+  color: #f3ecec69;
+  padding: 20px;
+  border-bottom: 4px dotted #333;
+
+}
+.crypto-box{
+  padding-left: 20px;
+}
+.crypto-content span{
+  
+  background-color: #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  
+}
+.crypto-content-box{
+  border: 1px solid #333;
+  width: 30%;
+  margin: 20px 20px 20px 120px;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.698);
+}
+.box-tick{
+  border: 1px solid #333;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.horizontal-bar {
+  width: 50%; 
+  height: 5px; 
+  background-color: #333; 
+  margin: 10px 0;
+  /* border: 1px solid #333; */
+  
+}
+.learner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-left: 400px;
+  justify-content: center;
+  /* margin-right: 20%; */
+  margin-top: -50%;
+  margin-left: 40%;
+  
+}
+.learner img{
+  width: 200px;
+  height: 220px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+.learner p{
+  font-size: 0.9rem;
+  color: #f3ecec69;
+  padding: 20px;
+}
+.claim{
+  border: #333;
+  background-color: #333;
+  padding: 10px 50px;
+  border-radius: 20px;
+}
+
+
+
+
+
+ 
+.content-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.content-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.content-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background-color: #333;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tabs button.active {
+  background-color: #a0f;
+}
+
+
+/* 2nd css */
+/* .container {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #000;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item.active {
+  border-bottom: 2px solid #fff;
+}
+
+.sign-in-button {
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.quest-title {
+  font-size: 24px;
+}
+
+.xp {
+  background: #6c63ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.quest {
+  background: #222;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.quest-number {
+  font-size: 18px;
+}
+
+.task-count {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.nft {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nft-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.nft-text {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.nft-description {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.claim-button {
+  background: #6c63ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.airdrop-section {
+  display: flex;
+  align-items: center;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.airdrop-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.airdrop-details {
+  flex: 1;
+}
+
+.airdrop-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.airdrop-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.reward-countdown {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.countdown-number {
+  font-size: 18px;
+}
+
+.countdown-label {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.reward-info {
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.reward-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.reward-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.win-criteria {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #aaa;
+} */
