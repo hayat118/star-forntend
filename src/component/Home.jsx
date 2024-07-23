@@ -6,7 +6,8 @@ const Home = () => {
   return (
     <>
       <div className="main-content">
-        <h1>Intract Academy</h1>
+        <h1>Intract Academy </h1>
+
         <p>
           Intract users have together made more than $100 million in web3. Join
           them and learn how to earn crypto!
